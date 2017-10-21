@@ -1,0 +1,42 @@
+﻿Add ( X )
+{
+	Ako ( X ne stane u trenutni spremnik )
+		{
+		Pripremi novi , dvostruko veci , spremnik ;
+		}
+	Dodaj X u spremnik na iducu slobodnu poziciju u spremniku ;
+}
+
+RemoveAt ( Index )
+{
+	Ako ( Index ne pada unutar spremnika )
+	{
+		Baci index out of range iznimku ;
+	}
+	Makni element na poziciji Index ;
+	Shift desnih elemenata u lijevo za jedno mjesto ;
+	Vrati true ;
+}
+
+Remove ( X )
+{
+	Pronadi poziciju elementa X ;
+	Vrati RemoveAt ( pozicija elementa X ) ;
+}
+
+GetElement ( Index )
+{
+	Ako ( Index pada unutar spremnika )
+	{
+		Vrati element na poziciji Index ;
+	}
+	Inace
+	{
+		Baci IndexOutOfRangeException ;
+	}
+}
+
+Get Count
+{
+	Vrati poziciju zadnjeg elementa u spremniku + 1;
+}
